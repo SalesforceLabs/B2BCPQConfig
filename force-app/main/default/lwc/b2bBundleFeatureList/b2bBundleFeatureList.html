@@ -1,0 +1,22 @@
+<template>
+  <lightning-card>
+    <template if:true={featuresExist}>
+      <lightning-layout class="slds-grid" multiple-rows>
+        <template for:each={featuresList} for:item="feature">
+          <lightning-layout-item
+            key={feature.record.Id}
+            size="12"
+            class="slds-card_boundary"
+          >
+            <c-b2b-bundle-feature
+              feature={feature}
+              options={optionList}
+              onupdateselectedrows={handleRowUpdate}
+              onupdaterowquantities={handleRowQuantities}
+            ></c-b2b-bundle-feature>
+          </lightning-layout-item>
+        </template>
+      </lightning-layout>
+    </template>
+  </lightning-card>
+</template>

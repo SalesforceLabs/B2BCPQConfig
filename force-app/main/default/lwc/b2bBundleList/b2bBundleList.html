@@ -1,0 +1,17 @@
+<template>
+  <lightning-layout class="slds-grid" multiple-rows>
+    <template for:each={products} for:item="bundle">
+      <lightning-layout-item
+        key={bundle.Id}
+        size="4"
+        class="slds-card_boundary"
+      >
+        <c-b2b-bundle-tile
+          product={bundle}
+          onupdatebundleselection={handleBundleSelection}
+        >
+        </c-b2b-bundle-tile>
+      </lightning-layout-item>
+    </template>
+  </lightning-layout>
+</template>

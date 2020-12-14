@@ -1,0 +1,20 @@
+<template>
+   <div class="slds-m-bottom_medium">
+
+    <template if:true={viewSelection}>
+      <c-b2b-bundle-selection
+        onupdatebundleselection={handleConfigureBundleTile}
+      ></c-b2b-bundle-selection>
+    </template>
+
+    <template if:true={viewConfiguration}>
+      <c-b2b-bundle-configurator
+        bundle-id={bundleId}
+        cart-base-u-r-l={cartBaseURL}
+        bundle-image={bundleImage}
+        onupdateview={updateView}
+      ></c-b2b-bundle-configurator>
+    </template>
+
+  </div> 
+</template>

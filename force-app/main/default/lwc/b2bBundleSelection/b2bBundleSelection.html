@@ -1,0 +1,20 @@
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Build a product"
+    icon-name="standard:search"
+  >
+    <template if:true={bundlesExist}>
+      <c-b2b-bundle-list 
+        products={products}
+        onupdatebundleselection={sendBundleConfigTile}
+      >
+      </c-b2b-bundle-list>
+    </template>
+    <template if:false={loading}>
+      <template if:false={bundlesExist}>
+        <div class="slds-p-around_medium">{messageNoBundles}</div>
+      </template>
+    </template>
+  </lightning-card>
+</template>

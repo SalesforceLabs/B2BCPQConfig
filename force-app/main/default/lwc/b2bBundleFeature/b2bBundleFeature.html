@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title={featureName}>
+    <template if:true={featureOptionsExist}>
+      <c-b2b-bundle-option-list
+        options={thisFeatureOptions}
+        onupdateselectedrows={handleRowUpdate}
+        onupdaterowquantities={handleRowQuantities}
+      ></c-b2b-bundle-option-list>
+    </template>
+    <template if:false={featureOptionsExist}>
+      <h1 class="slds-text-heading_small slds-p-around_medium">
+        No Options Available.
+      </h1>
+    </template>
+  </lightning-card>
+</template>

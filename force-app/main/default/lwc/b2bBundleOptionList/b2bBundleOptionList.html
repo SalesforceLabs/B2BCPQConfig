@@ -1,0 +1,31 @@
+<template>
+  <div class="slds-p-around_medium lgc-bg">
+    <!-- <lightning-datatable
+      key-field="Id"
+      columns={columns}
+      data={options}
+      sorted-by={sortBy}
+      sorted-direction={sortDirection}
+      onsort={handleSortdata}
+      oncellchange={handleSave}
+      onrowaction={callRowAction}
+      onrowselection={callRowSelection}
+      selected-rows={preSelectedRows}
+      suppress-bottom-bar
+    ></lightning-datatable> -->
+    <c-salesforce-codex-data-table
+      key-field="Id"
+      columns={columns}
+      data={options}
+      sorted-by={sortBy}
+      sorted-direction={sortDirection}
+      onsort={handleSortdata}
+      oncellchange={handleSave}
+      onrowaction={callRowAction}
+      onrowselection={callRowSelection}
+      selected-rows={preSelectedRows}
+      suppress-bottom-bar
+    >
+    </c-salesforce-codex-data-table>
+  </div>
+</template>

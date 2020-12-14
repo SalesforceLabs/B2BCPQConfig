@@ -1,0 +1,29 @@
+<template>
+    <article class="slds-card no-border">
+        <div
+          class="slds-card__body slds-card__body_inner slds-align_absolute-center"
+        >
+          <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Processing"></lightning-spinner>
+          </template>
+          <div class="slds-visual-picker slds-visual-picker_small">
+            <span
+              class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center"
+              onclick={handleBundleSelection}
+            >
+              <span class="slds-icon_container">
+                <template if:true={useStandardImage}>
+                  <img src={salesforceLogo} alt="Product Picture" />
+                </template>
+                <template if:false={useStandardImage}>
+                  <img src={productImage} alt="Product Picture" />
+                </template>
+              </span>
+            </span>
+            <span class="slds-visual-picker__body">
+              <span class="slds-text-heading_small">{productName}</span>
+            </span>
+          </div>
+        </div>
+      </article>
+</template>
