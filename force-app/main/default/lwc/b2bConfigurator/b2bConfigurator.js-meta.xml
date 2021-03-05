@@ -16,5 +16,6 @@
             <property name="effectiveAccountId" type="String" label="Effective Account Id" description="The Id of the account under which the user is acting (BETA)." default="{!CurrentUser.effectiveAccountId}"/>
             <property name="cartBaseURL" type="String" label="Cart Base URL" description="The cart base URL. Defaults to 'cart/cartId.'" default="cart"/>
         </targetConfig>
+         
     </targetConfigs>
 </LightningComponentBundle>

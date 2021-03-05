@@ -11,13 +11,8 @@
         <target>lightningCommunity__Default</target>
     </targets>
     <targetConfigs>
-      <targetConfig targets="lightningCommunity__Default">
-        <property
-          name="effectiveAccountId"
-          type="String"
-          label="Effective Account Id"
-          description="The Id of the account under which the user is acting (BETA)."
-          default="{!CurrentUser.effectiveAccountId}"/>
-      </targetConfig> 
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="effectiveAccountId" type="String" label="Effective Account Id" description="The Id of the account under which the user is acting (BETA)." default="{!CurrentUser.effectiveAccountId}"/>
+        </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
